@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(185, 242, 255);
+    margin: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(12, 11, 65);
+    text-align: center;
+}
+h1 {
+    margin-bottom: 75px;
+}
