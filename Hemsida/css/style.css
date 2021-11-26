@@ -1,0 +1,278 @@
+/*koden för varukorgs animationen*/
+@keyframes varukorg {
+    0%   {background-color:#e10600; right:0px; top:0px;}
+    25%  {background-color:#ffffff; right:200px; top:0px;}
+    50%  {background-color:#000; right:200px; top:200px;}
+    75%  {background-color:#ffffff; right:0px; top:200px;}
+    100% {background-color:#e10600; right:0px; top:0px;}
+}
+
+/*Animationen för faden på bilderna*/
+@keyframes fade {
+    from {opacity: .4;}
+    to { opacity: 1;}
+}
+
+/*Animationen för faden på bilderna*/
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+/*containern för översta menyn*/
+.flexbox-container-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e10600;
+}
+
+
+/*de 6 items här under är de olika meny alternativ*/
+.flexbox-item-header {
+    border: 0px solid #333;
+    width: 180px;
+    min-height: 10px;
+}
+
+.flexbox-item-index {
+    width: calc(100%);
+}
+
+.flexbox-item-produktsida {
+    width: calc(100%);
+}
+
+.flexbox-item-kontakt {
+    width: calc(100%);
+}
+
+.flexbox-item-om-oss {
+    width: calc(100%);
+}
+
+.flexbox-item-varukorg {
+    float: right;
+    text-align: center;
+    position: relative;
+    color:rgb(255, 255, 255);
+    width: calc(100%);
+}
+
+/*Koden för att varukorgen expanderar*/
+.list {    
+    background-color: #e10600;
+    height: 250px;
+    width: 300px;
+    border: 2px solid #e10600;
+    right: 0;
+    position: absolute;
+    transition: 1s all;
+    transform: scale(0) ;
+    transform-origin: 100% 0%;
+    z-index: +1;
+    animation: varukorg 1s linear 2s infinite alternate;
+}
+
+/*gör så att när man håller över varukorgen åker listan ner*/
+.cart:hover > .list {
+    transform: scale(1);
+}
+
+/*ändrar länkarnas färg till vit och gör att det strecket under inte är där*/
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/*centrerar all text och ändrar all text till den fonten*/
+body {
+    text-align: center;
+    font-family: "Titillium Web";
+}
+
+/*bakgrundsfärgen för hela hemsidan*/
+html {
+    background-color: #ffffff;
+}
+
+/*ändrar storleken för vilder så de passar bra i flexbox itemserna*/
+img {
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*ändrar all h1 text till fetstil*/
+h1 {
+    font-weight: bold;
+}
+
+/*containern för förhandvisnings bilderna*/
+.flexbox-container-för {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ändrar all h2, h3, p text till tunnare*/
+h2, h3, p {
+    font-weight: lighter;
+}
+
+/*de nästa 4 är alla olika items på förhandsvisningssidan*/
+.flexbox-item-för {
+    border: 0px solid #333;
+    background-color: #ffffff;
+    width: 32%;
+    height: 500px;
+    margin-bottom: 10%;
+    position: relative;
+}
+
+.flexbox-item-för-1 {
+
+}
+
+.flexbox-item-för-3 {
+    
+}
+
+.flexbox-item-för-3 {
+    
+}
+
+/*container för bilderna på produktsidan*/
+.flexbox-container-produkter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*de nästa 13 är items för bilderna på produktsidan*/
+.flexbox-item-produkter {
+    border: 0px solid #333;
+    background-color: #ffffff;
+    width: 25%;
+    height: 500px;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.flexbox-item-produkt1 {
+
+}
+
+.flexbox-item-produkt2 {
+    
+}
+
+.flexbox-item-produkt3 {
+    
+}
+
+.flexbox-item-produkt4 {
+    
+}
+
+.flexbox-item-produkt5 {
+    
+}
+
+.flexbox-item-produkt6 {
+    
+}
+
+.flexbox-item-produkt7 {
+    
+}
+
+.flexbox-item-produkt8 {
+    
+}
+
+.flexbox-item-produkt9 {
+    
+}
+
+.flexbox-item-produkt10 {
+    
+}
+
+.flexbox-item-produkt11 {
+    
+}
+
+.flexbox-item-produkt12 {
+    
+}
+
+/*containern för text och bild på "om oss" sidan*/
+.flexbox-container-text-bild {
+    display: flex;
+}
+
+/* rubriken på "om oss"*/
+.flexbox-item-rubrik {
+    
+}
+
+/*texten på "om oss"*/
+.flexbox-item-text {
+    justify-content: left;
+    column-gap: normal;
+}
+
+/*bilden på "om oss"*/
+.flexbox-item-bild {
+    margin-top: -2%;
+    width: calc(100%);
+}
+
+/*Koden för knapparna på bilderna*/
+.button-bilder {
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden
+    ;text-decoration:none;
+    color:inherit;background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
+
+/*Koden för knapparna på bilderna*/
+.button-color {
+    color:#fff;
+    background-color:#000;
+}
+
+/*Koden för knapparna på bilderna*/
+.button-display-left {
+    position:absolute;
+    top:50%;
+    left:0%;
+    transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)
+}
+
+/*Koden för knapparna på bilderna*/
+.button-display-right {
+    position:absolute;
+    top:50%;
+    right:0%;
+    transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)
+}
+
+/*containern för footer*/
+.flexbox-container-footer {
+    display: flex;
+    background-color: #e10600;
+    color: #ffffff;
+}
+
+/*item för footer*/
+.flexbox-item-footer {
+
+}

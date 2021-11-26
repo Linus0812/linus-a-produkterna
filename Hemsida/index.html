@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>F1 Authentics</title>
+        <!--Länkar till fonten-->
+        <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+    </head>
+    <body>
+        <!--Containern till översta menyn-->
+        <div class="flexbox-container-header">
+            <!--De olika meny alternativ-->
+            <a href="index.html" class="flexbox-item-header flexbox-item-index">
+                <div class="flexbox-item-header flexbox-item-index">
+                    <img src="img/logo-default.png" width="100%" height="100%">
+                </div>
+                </a>
+            <div class="flexbox-item-header flexbox-item-produktsida">
+                <h1><a href="produkter.html">Produkter</a></h1>
+            </div>
+            <div class="flexbox-item-header flexbox-item-kontakt">
+                <h1><a href="kontakt.html">Kontakt</a></h1>
+            </div>
+            <div class="flexbox-item-header flexbox-item-om-oss">
+                <h1><a href="om-oss.html">Om oss</a></h1>
+            </div>
+            <a href="varukorg.html" class="flexbox-item-header flexbox-item-varukorg">
+            <div class="flexbox-item-header flexbox-item-varukorg">
+                <div>
+                    <div class="cart">
+                      <img src="img/pngaaa.com-293103.png" width="75px" height="75px">
+                      <div class="list">
+                        <p>Varukorg:</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            </a>
+        </div>
+        <h1>Förhandsvisning</h1>
+        <!--Containern till de 3 förhandsbilderna-->
+        <div class="flexbox-container-för">
+            <!--De 3 bilderna-->
+            <div class="flexbox-item-för flexbox-item-för-1">
+                <img class="mySlides1 fade" src="img/Esteban_Ocon.jpg" alt="Estean Ocon" width="400x" height="400px">
+                <img class="mySlides1 fade" src="img/Esteban_Ocon2.jpg" alt="Estean Ocon" width="400x" height="400px">
+                <img class="mySlides1 fade" src="img/Esteban_Ocon3.jpg" alt="Estean Ocon" width="400x" height="400px">
+                <img class="mySlides1 fade" src="img/Esteban_Ocon4.jpg" alt="Estean Ocon" width="400x" height="400px">
+                
+                <!--Knapparna för att byta bild-->
+                <button class="button-bilder button-color button-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+                <button class="button-bilder button-color button-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+                <h3>Esteban Ocon Race Used Race Suit</h3>
+                <h2>£2,999,99</h2>
+                <h3>Lägg till i varukorg</h3>
+            </div>
+            <div class="flexbox-item-för flexbox-för-2">
+                <img class="mySlides2 fade" src="img/Kimi_Raikönnen.jpg" alt="Kimi Raikönnen" width="400x" height="400px" >
+                <img class="mySlides2 fade" src="img/Kimi_Raikönnen2.jpg" alt="Kimi Raikönnen" width="400x" height="400px">
+                <img class="mySlides2 fade" src="img/Kimi_Raikönnen3.jpg" alt="Kimi Raikönnen" width="400x" height="400px">
+                <img class="mySlides2 fade" src="img/Kimi_Raikönnen4.jpg" alt="Kimi Raikönnen" width="400x" height="400px">
+
+                <button class="button-bilder button-color button-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
+                <button class="button-bilder button-color button-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
+                <h3>Kimi Räikönnen Race Used Nomex</h3>
+                <h2>£649,99</h2>
+                <h3>Lägg till i varukorg</h3>
+            </div>
+            <div class="flexbox-item-för flexbox-item-för-3">
+                <img class="mySlides3 fade" src="img/Lewis_Hamilton.jpg" alt="Lewis Hamilton" width="400x" height="400px">
+                <img class="mySlides3 fade" src="img/Lewis_Hamilton2.jpg" alt="Lewis Hamilton" width="400x" height="400px">
+                <img class="mySlides3 fade" src="img/Lewis_Hamilton3.jpg" alt="Lewis Hamilton" width="400x" height="400px">
+                <img class="mySlides3 fade" src="img/Lewis_Hamilton4.jpg" alt="Lewis Hamilton" width="400x" height="400px">
+
+                <button class="button-bilder button-color button-display-left" onclick="plusDivs(-1, 2)">&#10094;</button>
+                <button class="button-bilder button-color button-display-right" onclick="plusDivs(1, 2)">&#10095;</button>
+
+                <h3>Lewis Hamilton Race Used Race Boots</h3>
+                <h2>£1,999,99</h2>
+                <h3>Lägg till i varukorg</h3>
+            </div>
+            <div class="flexbox-container-footer">
+                <div class="flexbox-item-footer">
+                    <p>
+                        © 2021 Formula One World Championship
+        
+        All Content including images and products strictly Copyright © 2020-2021, BG Sports Enterprises Ltd.
+        
+        t/a F1 Authentics, Company No.07236294. All rights reserved.
+                    </p>
+                </div>
+            </div>     
+            <!--Javascript för bildspelet-->
+            <script>
+                var slideIndex = [1,1,1];
+                var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+                showDivs(1, 0);
+                showDivs(1, 1);
+                showDivs(1, 2);
+                
+                function plusDivs(n, no) {
+                  showDivs(slideIndex[no] += n, no);
+                }
+                
+                function showDivs(n, no) {
+                  var i;
+                  var x = document.getElementsByClassName(slideId[no]);
+                  if (n > x.length) {slideIndex[no] = 1}
+                  if (n < 1) {slideIndex[no] = x.length}
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  x[slideIndex[no]-1].style.display = "block";  
+                }
+            </script>
+    </body>
+</html>
